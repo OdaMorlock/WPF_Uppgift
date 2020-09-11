@@ -6,5 +6,6 @@ namespace WPF_Uppgift.Models
 {
     class MessageModel
     {
+
     }
 }

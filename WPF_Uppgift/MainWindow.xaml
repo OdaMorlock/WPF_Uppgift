@@ -3,9 +3,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
         xmlns:local="clr-namespace:WPF_Uppgift"
+        
+        xmlns:models="clr-namespace:WPF_Uppgift.Models"
+        xmlns:views="clr-namespace:WPF_Uppgift.Views"
+        
+        
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="720" Width="1200">
+
+    <Window.Resources>
+        <DataTemplate x:Name="ContactViewTemplate" DataType="{x:Type models:ContactModel}">
+            <views:ContactViewModel DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="MessageViewTemplate" DataType="{x:Type models:MessageModel}">
+            <views:MessageViewModel DataContext="{Binding}" />
+        </DataTemplate>
+    </Window.Resources>
+
+
+
     <Grid>
 
         <Grid.ColumnDefinitions>
