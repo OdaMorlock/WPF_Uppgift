@@ -20,6 +20,15 @@
         <DataTemplate x:Name="MessageViewTemplate" DataType="{x:Type models:MessageModel}">
             <views:MessageViewModel DataContext="{Binding}" />
         </DataTemplate>
+        <DataTemplate x:Name="CalanderViewTemplate" DataType="{x:Type models:CalanderModel}">
+            <views:CalanderViewModel DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="TaskViewTemplate" DataType="{x:Type models:TaskModel}">
+            <views:TaskViewModel DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="SettingViewTemplate" DataType="{x:Type models:SettingModel}">
+            <views:SettingViewModel DataContext="{Binding}" />
+        </DataTemplate>
     </Window.Resources>
 
 
@@ -61,6 +70,30 @@
 
                 </Button>
 
+                <Button x:Name="btnCalander" Click="btnCalander_Click" Background="Transparent" BorderThickness="0" Foreground="#FF9DD0FD" HorizontalContentAlignment="Left" Padding="15">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE787;" FontSize="18"/>
+                        <TextBlock Margin="15,0,0,0" Text="Calander" />
+                    </StackPanel>
+
+                </Button>
+
+                <Button x:Name="btnTask" Click="btnTask_Click" Background="Transparent" BorderThickness="0" Foreground="#FF9DD0FD" HorizontalContentAlignment="Left" Padding="15">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE7C4;" FontSize="18"/>
+                        <TextBlock Margin="15,0,0,0" Text="Tasks" />
+                    </StackPanel>
+
+                </Button>
+                
+                <Button x:Name="btnSetting" Click="btnSetting_Click" Background="Transparent" BorderThickness="0" Foreground="#FF9DD0FD" HorizontalContentAlignment="Left" Padding="15">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE713;" FontSize="18"/>
+                        <TextBlock Margin="15,0,0,0" Text="Settings" />
+                    </StackPanel>
+
+                </Button>
+               
 
 
             </StackPanel>

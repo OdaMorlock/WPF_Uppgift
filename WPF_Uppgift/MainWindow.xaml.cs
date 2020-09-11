@@ -36,5 +36,20 @@ namespace WPF_Uppgift
             DataContext = new MessageModel();
         }
 
+        private void btnCalander_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new CalanderModel();
+        }
+
+        private void btnTask_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new TaskModel();
+        }
+
+        private void btnSetting_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new SettingModel();
+        }
+
     }
 }
